@@ -11,6 +11,7 @@
     <link href="assets/css/vendor.min.css" rel="stylesheet" />
 	<link href="assets/css/default/app.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	    <!-- ================== END core-css ================== -->
     
 </head>
@@ -61,13 +62,34 @@
             padding: 14px 20px;
             background-color: #f44336;
         }
+        /* #app{
+            position: absolute;
+            margin-top :-45%;
+            margin-left :-79%;
+            color: white;
+            display: static;
+             
+        } */
+        p{
+            margin-top : 10px;
+        }
     </style>
 </head>
 
 
-<body>
-
+<body >
+    
+    </div>
     <form>
+    <div id="app" class="app app-header-fixed app-sidebar-fixed">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN navbar-header -->
+			    <div class="navbar-header h3">
+				    <a href="index.php" class="navbar-brand "><span class="navbar-logo"><i class="bi bi-music-note-list"></i></span> <b class="me-1">YouMusique</b></a>
+			    </div>
+        </div>
+    </div>
         <div class="container">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
@@ -85,7 +107,7 @@
                 <p><b>Repeat Password</b></p>
             </div>
             <input type="password" placeholder="Enter Password" name="psw-Repeat" required>
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <p class='mt'>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Sign Up</button>
                 <button type="button" class="cancelbtn">Cancel</button>
