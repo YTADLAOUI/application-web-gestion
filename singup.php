@@ -20,20 +20,23 @@
         body {
             font-family: 'Lato', sans-serif;
             color: #fffcfc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
             overflow: hidden;
             margin: 0;
             padding: 0;
-            background-color: black;
-            background-image: url('guitar.jpg');
-            background-size : cover;
+            
         }
-        
+        .bg{
+            width:100%;
+            height:100%;
+            position: fixed;
+            background-image: url('img/guitar.jpg');
+            background-size : cover;
+            filter : blur(5px);
+            Z-index :-1;
+        }
         input {
-            width: 70%;
+            width: 100%;
             border-radius: 4px;
             border: none;
             font-family: inherit;
@@ -73,40 +76,54 @@
         p{
             margin-top : 10px;
         }
+        form {
+            width: 40%;
+        }
+        .fors{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            text-align: center;
+        }
     </style>
 </head>
 
 
 <body >
         
-    </div>
+    
+    <div class="bg"></div>
+    <nav>
+<div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
+    </nav>
+    <div class="fors">
     <form>
         <div class="container">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
             <hr>
-            <div class="email">
+            <div class="email d-flex align-items-start">
                 <p><b>Email</b></p>
             </div>
             <input type="text" placeholder="Enter Email" name="email" required>
 
-            <div class="psw">
+            <div class="psw d-flex align-items-start">
                 <p><b>Password</b></p>
             </div>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <div class="psw">
+            <div class="psw d-flex align-items-start">
                 <p><b>Repeat Password</b></p>
             </div>
             <input type="password" placeholder="Enter Password" name="psw-Repeat" required>
             <p class='mt'>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Sign Up</button>
-                <button type="button" class="cancelbtn">Cancel</button>
+                <a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"> <button type="button" class="cancelbtn">Cancel</button></a>
             </div>
         </div>
 
     </form>
-
+    </div>
 </body>
 
 </html>

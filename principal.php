@@ -14,10 +14,10 @@
     <title>Dashbord</title>
 </head>
 <body class="bg-danger">
-    <div class="page d-flex">
+    <div class="page d-flex ">
         <div class="sidebar bg-white position-relative text-center" style= "padding :20px";>
-            <h3 class="position-relative  mt-0">RockStars</h3>
-            <ul style="padding-left: 0px;">
+        <div class=" h4  position-relative"  style ="height:10vh;"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></div>
+            <ul style="padding-left: 0px;" style ="height:90vh;">
                 <li>
                     <a class="active d-flex align-items-center h6 text-dark p-4" style="border-radius 6px;" href="principal.php">
                     <i class="bi bi-graph-down me-2"></i>
@@ -48,6 +48,13 @@
                     <span>add instrument</span>
                     </a>
                 </li>
+            </ul>
+            <ul style ="height:30vh;" class="d-flex align-items-end">
+                    <a class="d-flex align-items-end h6 text-dark p-4" style="border-radius 6px;" href="principal.php">
+                    <i class="bi bi-plus-circle-dotted me-2"></i>
+                    <span>add instrument</span>
+                    </a>
+
             </ul>
         </div>
         <div class="content">content</div>
