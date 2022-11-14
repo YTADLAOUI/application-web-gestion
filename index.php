@@ -12,6 +12,11 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	    <!-- ================== END core-css ================== -->
 		<style>
+			@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+			body{
+				font-family: 'Lato', sans-serif;
+				
+			}
 		.logo {
     			background-image: url("img/instr.jpg");
     			width: 100%;
@@ -44,48 +49,53 @@
 			 }
 			 .citation{
 				width:60%;
-				margin-bottom :20%;
+				/* margin-bottom :20%; */
 			 }
+			 
 
                                                   }
-
+			@media only screen and (max-width: 352px){
+            .name-logo{
+				display: none;
+			}
+			}
 
 		</style>
 </head>
 <body>
+	<div style="height:100vh">
 	<div class="logo"></div>
-	<nav style ="margin-bottom :15%;">
+	<nav style ="height:10vh;">
 		<div class="d-flex justify-content-around pt-5">
-			<div class="text-white h1"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="">RockStars</b></div>
+			<div class="text-white h1"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></div>
 					<div class="nav-b">
-           						<ul class="d-flex list-unstyled ">
-									<li><a href="" class="text-decoration-none text-white h3 me-5" ><b>Home</b></a></li>
-									<li><a href="" class="text-decoration-none text-white h3 me-5"><b>Service</b></a></li>
-									<li><a href="" class="text-decoration-none text-white h3"><b>Contact Us</b></a></li>
+           						<ul class="d-flex list-unstyled mt-2">
+									<li><a href="" class="text-decoration-none text-white h5 me-5" >Home</a></li>
+									<li><a href="" class="text-decoration-none text-white h5 me-5">Service</a></li>
+									<li><a href="" class="text-decoration-none text-white h5">Contact Us</a></li>
 								</ul>
 					</div>
 							<div class="d-flex">
-								<a href="login.php" class="me-2"><button type="button" class="btn btn-outline-primary text-white "><h4>Sign In</h4></button></a>
-                  				<a href="singup.php"><button type="button" class="btn btn-outline-danger text-white "><h4>Sign Up</h4></button></a>
+								<a href="login.php" class="me-2"><button type="button" class="btn btn-outline-primary text-white "><h6>Sign In</h6></button></a>
+                  				<a href="singup.php"><button type="button" class="btn btn-outline-danger text-white "><h6>Sign Up</h6></button></a>
 								
 							</div>
 		</div>
 	</nav>
-	<section >
-				<div class="d-flex justify-content-around ">
+	<section style="height:75vh" >
+				<div class="d-flex justify-content-around align-items-center h-100">
 						<div class="text-white citation me-3">
-									<h1>Le but de l'art, le but d'une vie ne peut être que d'accroître la somme de liberté et de responsabilité qui est dans chaque homme et dans le monde.</h1>
+									<h2>Le but de l'art, le but d'une vie ne peut être que d'accroître la somme de liberté et de responsabilité qui est dans chaque homme et dans le monde.</h2>
 						</div>
-						<div class=" text-white citation "> <h1>RockStars c'est un application de gestion qui aide l'utilisateur gére en ligne de son stock des instruments de musique pour maintenir tout le travail quotidien du stock.</h1> </div>
+						<div class=" text-white citation "> <h2>RockStars c'est un application de gestion qui aide l'utilisateur gére en ligne de son stock des instruments de musique pour maintenir tout le travail quotidien du stock.</h2> </div>
 				</div>
 	</section>
-	<footer class=" text-center text-white " style="background-color: rgba(0, 0, 0, 0.2);
-	margin-top: 13.5%;">
+	<footer style="height:15vh" class=" text-center text-white " style="background-color: rgba(0, 0, 0, 0.2);">
 	    	
 					<!-- Grid container -->
-					<div class="container p-4 pb-0 ">
+					<div class="container p-0 ">
 						<!-- Section: Social media -->
-						<section class="mb-4">
+						<section class="">
 						<!-- Facebook -->
 						<a
 							class="btn text-white btn-floating m-1"
@@ -144,7 +154,7 @@
 					</div>
 					<!-- Copyright -->
 			
-</footer>
-    
+     </footer>
+	 </div>
 </body>
 </html>

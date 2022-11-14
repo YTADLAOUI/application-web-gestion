@@ -10,26 +10,30 @@
 	<link rel="stylesheet" href="style.css">
         <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	    <!-- ================== END core-css ================== -->
 
 </head>
 <style>
         @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-        body {
+        body{
             font-family: 'Lato', sans-serif;
             color: #fffcfc;
-            display: flex;
             justify-content: center;
-            align-items: center;
             min-height: 100vh;
             overflow: hidden;
             margin: 0;
-            padding: 0;
-            background-color: black;
-            background-image: url('guitar.jpg');
-            background-size : cover;
+            padding: 0;    
         }
-        
+        .logo{
+            width: 100%;
+            height :100%;
+            position: fixed;
+            background-image: url('img/guitar.jpg');
+            background-size : cover;
+            filter: blur(5px);
+            
+        }
         input {
             width: 100%;
             border-radius: 4px;
@@ -59,7 +63,7 @@
             margin: 8px 0;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 50%;
             opacity: 0.9;
         }
         
@@ -71,45 +75,59 @@
             padding: 14px 20px;
             background-color: #f44336;
         }
-        .logo{
-          position: absolute;
-
+        .fors{
+            position: relative;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            text-align: center;
         }
+       form{
+            width:40%;
+            
+       }
+       
+
+
+       
+       /* .ss{margin-left: -522px;} */
     </style>
 </head>
 
 
 <body>
+    
+    <div class="logo"></div>
 <nav>
-  <div class="logo">
-    <img src="" alt="">
-  </div>
+<div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
 </nav>
-    <form>
+    <div class="fors">
+    <form class="">
         <div class="container">
             <h1>Sign In</h1>
             <p>Welcome back to our application enjoy it.</p>
             <hr>
-            <div class="email">
+            <div class="email d-flex align-items-start">
                 <p><b>Email</b></p>
             </div>
             <input type="text" placeholder="Enter Email" name="email" required>
 
-            <div class="psw">
+            <div class="psw d-flex align-items-start">
                 <p><b>Password</b></p>
             </div>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <div class="chec">
+            <div class="chec d-flex align-items-start">
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> <span>Remember me</span>
             </div>
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Sign in</button>
             </div>
-            <div class="text-center">
+            <div class="text-center ">
                 <p>Not a member? <a href="http://localhost/projetGestion/singup.php">Register</a></p>
             </div>
-
+        </div>
     </form>
+    </div>
 
     
 </body>

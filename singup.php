@@ -78,18 +78,9 @@
 
 
 <body >
-    
+        
     </div>
     <form>
-    <div id="app" class="app app-header-fixed app-sidebar-fixed">
-		<!-- BEGIN #header -->
-		<div id="header" class="app-header">
-			<!-- BEGIN navbar-header -->
-			    <div class="navbar-header h3">
-				    <a href="index.php" class="navbar-brand "><span class="navbar-logo"><i class="bi bi-music-note-list"></i></span> <b class="me-1">YouMusique</b></a>
-			    </div>
-        </div>
-    </div>
         <div class="container">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
