@@ -51,8 +51,8 @@
             </ul>
             <ul style ="height:30vh;" class="d-flex align-items-end">
                     <a class="d-flex align-items-end h6 text-dark p-4" style="border-radius 6px;" href="principal.php">
-                    <i class="bi bi-plus-circle-dotted me-2"></i>
-                    <span>add instrument</span>
+                    <i class="bi bi-box-arrow-left me-2"></i>
+                    <span>Log out</span>
                     </a>
 
             </ul>
