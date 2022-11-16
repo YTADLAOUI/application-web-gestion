@@ -43,7 +43,7 @@
             outline: none;
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
             padding: 0.9rem 0.7rem;
-            font-size: 17px;
+            font-size: 13px;
         }
         
         button {
@@ -75,6 +75,7 @@
         } */
         p{
             margin-top : 10px;
+            font-size : 14px;
         }
         form {
             width: 40%;
@@ -99,7 +100,7 @@
     <div class="fors">
     <form>
         <div class="container">
-            <h1>Sign Up</h1>
+            <h3>Sign Up</h3>
             <p>Please fill in this form to create an account.</p>
             <hr>
             <div class="email d-flex align-items-start">

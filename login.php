@@ -123,7 +123,7 @@
                 <button type="submit" class="signupbtn">Sign in</button>
             </div>
             <div class="text-center ">
-                <p>Not a member? <a href="http://localhost/projetGestion/singup.php">Register</a></p>
+                <p>Not a member? <a href="http://localhost/application-web-gestion/singup.php">Register</a></p>
             </div>
         </div>
     </form>

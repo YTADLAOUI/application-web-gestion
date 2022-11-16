@@ -19,10 +19,8 @@
         <div class="content w-100 " style="background-color: rgb(226, 223, 220)">
             <!-- start-header -->
             <?php include 'header.php'; ?>
-            <h1 style= "font-size:3vw;">Dashbord</h1>
-        </div>
-            <!-- end -->
-    </div>
+            <h3 class="mb-5">list des instrements bois </h3>
+            <?php include 'tableau.php' ?>
    
     
 </body>
