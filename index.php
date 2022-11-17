@@ -87,7 +87,7 @@
 						<div class="text-white citation me-3">
 									<h2>Le but de l'art, le but d'une vie ne peut être que d'accroître la somme de liberté et de responsabilité qui est dans chaque homme et dans le monde.</h2>
 						</div>
-						<div class=" text-white citation "> <h2>RockStars c'est un application de gestion qui aide l'utilisateur gére en ligne de son stock des instruments de musique pour maintenir tout le travail quotidien du stock.</h2> </div>
+						<div class=" text-white citation "> <h2>RockStars c'est une application de gestion qui aide l'utilisateur à gére en ligne de son stock des instruments de musique pour maintenir le travail quotidien du stock.</h2> </div>
 				</div>
 	</section>
 	<footer style="height:15vh" class=" text-center text-white " style="background-color: rgba(0, 0, 0, 0.2);">

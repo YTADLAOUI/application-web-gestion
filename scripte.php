@@ -8,6 +8,7 @@
 
 
 
+
        function login(){
         global $conn;
         if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -36,8 +37,33 @@
         $description    = $_POST["inster-description"];
         $sqlconn ="INSERT INTO `instrement`( `name`, `description`, `date_time`, `quantite`, `categoryId`, `prix`) VALUES ('$Title','$description','$Date','$Quantite','$catégorie','$Prix')";
            mysqli_query($conn,$sqlconn);
-           header('location: instrement.php');
+           header('location: cration.php');
+           
         }
-    
-          
+        
+        function afficher($Var){
+            
+            global $conn;
+            $i=1;
+            $qyy="SELECT i.* ,c.name c_name FROM instrement i JOIN categorie c ON c.id = i.categoryId AND  i.categoryId= $Var";
+            $result = mysqli_query($conn,$qyy);
+            
+            while($row=mysqli_fetch_assoc($result)){
+                // $i++;
+                echo "
+                <tr> 
+                <th scope='row'>".$i++."</th>
+                <td>". $row['name'] ."</td>  
+                <td>". $row['quantite'] ."</td>
+                <td>". $row['prix'] ."dh</td>
+                <td>". $row['c_name'] ."</td>
+                <td>". $row['date_time'] ."</td>
+                <td>". $row['description'] ."</td>
+                <td><button type='submit' name='Edit' class='btn btn-primary task-action-btn' id='Edit-btn'><a href='cration.php?id=$row[instrement_id]'>Edit</a></td>
+
+                </tr>
+                
+                ";
+            }
+        }   
     ?>

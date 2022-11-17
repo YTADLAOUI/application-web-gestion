@@ -1,7 +1,4 @@
-<?php 
-						session_start();
-					    ?>
-            
+
             <div class="headzz d-flex align-items-center justify-content-between" style ="padding :20px;">
                     <div class="">
                         <div class="input-group rounded">

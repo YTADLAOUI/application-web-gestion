@@ -1,3 +1,6 @@
+<?php
+    include('scripte.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +22,20 @@
         <div class="content w-100 " style="background-color: rgb(226, 223, 220)">
             <!-- start-header -->
             <?php include 'header.php'; ?>
-            <h3 class="mb-5">list des instrements bois </h3>
-            <div class=" w-100 d-flex align-items-center"><?php include 'tableau.php' ?></div>
-            
+            <h5 class="mb-5 ms-3 mt-3">list des instrements bois </h5>
+            <div class=" w-100 d-flex justify-content-center">
+                <?php include 'tableau.php' ?>
+                <tbody>
+                    <?php
+                afficher(1);
+                    ?>
+                </tbody>
+                </table>
+                
+            </div>
+        </div>
+        
+    </div>   
    
     
 </body>
