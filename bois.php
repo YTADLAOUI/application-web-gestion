@@ -20,7 +20,8 @@
             <!-- start-header -->
             <?php include 'header.php'; ?>
             <h3 class="mb-5">list des instrements bois </h3>
-            <?php include 'tableau.php' ?>
+            <div class=" w-100 d-flex align-items-center"><?php include 'tableau.php' ?></div>
+            
    
     
 </body>

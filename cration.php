@@ -21,7 +21,7 @@
             <?php include 'header.php'; ?>
             <h5 class="p-3" style=""> + add instrement</h5>
             <div class="d-flex justify-content-center">
-                 <form class="">
+                 <form class="" action = "scripte.php" method ="POST">
                             <div class="mb-3">
 								<label class="form-label">Name d'instremente</label>
 								<input type="text" name ="instr-title" class="form-control" id="inster_title" required/>
@@ -40,7 +40,7 @@
 									<option value="1">Please select</option>
 									<option value="2">les instrements bois</option>
 									<option value="3">les instrments cordes</option>
-									<option value="4">Les instrement celle des claviers</option>
+									<option value="4">les instrement celle des claviers</option>
 									<option value="5">les instrements percussion</option>
 								</select>
 							</div>
@@ -52,6 +52,7 @@
 								<label class="form-label">Description</label>
 								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required></textarea>
 							</div>
+							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="task-save-btn">Save</button>
 				</form>
             </div>
         </div>

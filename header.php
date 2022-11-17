@@ -1,3 +1,7 @@
+<?php 
+						session_start();
+					    ?>
+            
             <div class="headzz d-flex align-items-center justify-content-between" style ="padding :20px;">
                     <div class="">
                         <div class="input-group rounded">
@@ -11,6 +15,11 @@
                         <span class="not">
                             <i class="bi bi-bell me-2"></i>
                         </span>
-                        <span class="immg"><img src="img/user-icon.png" alt=""></span>
+                        <span class="immg d-flex flex-column ">
+                           <div><img src="img/user-icon.png" alt=""></div>
+                            <?php 
+                            echo $_SESSION['name'];
+                            ?>
+                        </span>
                     </div>
             </div>

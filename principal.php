@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +22,34 @@
         <div class="content w-100 " style="background-color: rgb(226, 223, 220)">
             <!-- start-header -->
             <?php include 'header.php'; ?>
-            <h1 style= "font-size:3vw;">Dashbord</h1>
-        </div>
+            <h3 style= "">Dashbord</h3>
+                <div class = "d-flex flex-wrap align-items-center justify-content-around " style="height:70vh;">
+                    <div class="card" style="width: 9rem; height :15rem">
+                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/stor.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                    </div>
+                    <div class="card" style="width: 9rem; height :15rem">
+                            <img  style ="max-height: 40px; max-width :40px;" class="card-img-top" src="img/nbr.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                    </div>
+                    <div class="card" style="width: 9rem; height :15rem">
+                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/sala.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                    </div>
+                    <div class="card" style="width: 9rem; height :15rem;">
+                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/ddd.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
             <!-- end -->
     </div>
    

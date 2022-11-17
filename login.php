@@ -102,7 +102,7 @@
 <div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
 </nav>
     <div class="fors">
-    <form class="">
+    <form class="" action = "scripte.php" method ="POST">
         <div class="container">
             <h1>Sign In</h1>
             <p>Welcome back to our application enjoy it.</p>
@@ -120,7 +120,7 @@
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> <span>Remember me</span>
             </div>
             <div class="clearfix">
-                <button type="submit" class="signupbtn">Sign in</button>
+                <button type="submit" name ="signIn" class="signupbtn">Sign in</button>
             </div>
             <div class="text-center ">
                 <p>Not a member? <a href="http://localhost/application-web-gestion/singup.php">Register</a></p>
