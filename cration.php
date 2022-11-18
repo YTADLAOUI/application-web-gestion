@@ -1,5 +1,6 @@
 <?php
    include "data.php";
+   session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,32 +28,32 @@
                  <form class="" action = "scripte.php" method ="POST">
                             <div class="mb-3">
 								<label class="form-label">Name d'instremente</label>
-								<input type="text" value="<?php echo $row['name']?>" name ="instr-title" class="form-control" id="inster_title" required/>
+								<input type="text" value="<?= $row['name']?? ''  ?>" name ="instr-title" class="form-control" id="inster_title" required/>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">Quantite</label>
-								<input type="number" value="<?php echo $row['quantite']?>" name ="inster-qte" class="form-control" id="inster_qte" required/>
+								<input type="number" value="<?= $row['quantite']?? ''?>" name ="inster-qte" class="form-control" id="inster_qte" required/>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">Prix</label>
-								<input type="number"value="<?php echo $row['prix']?>" name ="inster-prix" class="form-control" id="inster_prix" required/>
+								<input type="number"value="<?= $row['prix'] ?? ''?>" name ="inster-prix" class="form-control" id="inster_prix" required/>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">catégorie</label>
 								<select class="form-select" name = "inster-cat" id="inster_cat">								
-									<option  <?php echo $row['categoryId'] == '1'  ? 'selected' : ''?> value="1">les instrements bois</option>
-									<option <?php echo $row['categoryId'] == '2'  ? 'selected' : ''?> value="2">les instrments cordes</option>
-									<option <?php echo $row['categoryId'] == '3'  ? 'selected' : ''?> value="3">les instrement celle des claviers</option>
-									<option <?php echo $row['categoryId'] == '5'  ? 'selected' : ''?>  value="5">les instrements percussion</option>
+									<option  <?= (isset($row['categoryId']) AND $row['categoryId'] == '1')  ? 'selected' : ''?> value="1">les instrements bois</option>
+									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '2')  ? 'selected' : ''?> value="2">les instrments cordes</option>
+									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '3' ) ? 'selected' : ''?> value="3">les instrement celle des claviers</option>
+									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '5')  ? 'selected' : ''?>  value="5">les instrements percussion</option>
 								</select>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">Date</label>
-								<input type="date" value="<?php echo $row['date_time']?>" class="form-control" name="inster-date" id="inster_date"/>
+								<input type="date" value="<?= $row['date_time'] ?? '' ?>" class="form-control" name="inster-date" id="inster_date"/>
 							</div>
 							<div class="mb-0 " >
 								<label class="form-label">Description</label>
-								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?php echo $row['description'] ?></textarea>
+								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
 							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
 							<button type='submit' name='update' class='btn btn-warning task-action-btn w-50' id='update-btn'>Update</a>

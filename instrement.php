@@ -1,5 +1,7 @@
 <?php 
-	session_start();
+	include "data.php";
+    session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +28,7 @@
 
       <div style="flex-wrap: wrap;" class="d-flex align-items-center justify-content-around ">
 
-        <a href ="http://localhost/application-web-gestion/bois.php"><button class="card"  style="width: 14rem;">
+        <a href ="http://localhost/application-web-gestion/categorie.php?id=1"><button class="card"  style="width: 14rem;">
             <img src="img/3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"> Les instrement bois</h5>
@@ -35,7 +37,7 @@
             </div>
         </button>
     </a>
-        <a href ="http://localhost/application-web-gestion/clavier.php">
+        <a href ="http://localhost/application-web-gestion/categorie.php?id=2">
             <button class="card"  style="width: 14rem;">
             <img src="img/2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -45,7 +47,7 @@
             </div>
         </button>
         </a>
-                    <a href ="http://localhost/application-web-gestion/cordes.php">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=3">
                         <button  class="card"  style="width: 14rem;">
                             <img src="img/1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -55,7 +57,7 @@
                             </div>
                         </button>
                     </a>
-                    <a href ="http://localhost/application-web-gestion/percussion.php"><button class="card"  style="width: 14rem;">
+                    <a href ="http://localhost/application-web-gestion/percussion.php?id=5"><button class="card"  style="width: 14rem;">
                         <img src="img/4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Les instrement des percussions</h5>
