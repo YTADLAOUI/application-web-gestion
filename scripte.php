@@ -42,8 +42,8 @@
         }
         
         function afficher($Var){
-            
             global $conn;
+
             $i=1;
             $qyy="SELECT i.* ,c.name c_name FROM instrement i JOIN categorie c ON c.id = i.categoryId AND  i.categoryId= $Var";
             $result = mysqli_query($conn,$qyy);
@@ -59,11 +59,13 @@
                 <td>". $row['c_name'] ."</td>
                 <td>". $row['date_time'] ."</td>
                 <td>". $row['description'] ."</td>
-                <td><button type='submit' name='Edit' class='btn btn-primary task-action-btn' id='Edit-btn'><a href='cration.php?id=$row[instrement_id]'>Edit</a></td>
+                <td><a href='cration.php?id=$row[instrement_id]' calss=''><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</a></td>
 
                 </tr>
                 
                 ";
             }
-        }   
+        } 
+        
+
     ?>

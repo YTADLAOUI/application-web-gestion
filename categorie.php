@@ -1,11 +1,11 @@
 <?php
-// include('database.php');
+ include('database.php');
     include('scripte.php');
     if(isset($_GET['id'])){
 		$id = $_GET['id'];}
-        echo "<pre>";
-         print_r($sqyl);
-        echo "</pre>";
+        $sqly="SELECT * FROM categorie";
+        $rus=mysqli_query($conn,$sqly);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,15 @@
         <div class="content w-100 " style="background-color: rgb(226, 223, 220)">
             <!-- start-header -->
             <?php include 'header.php'; ?>
-            <h5 class="mb-5 ms-3 mt-3">list des instrements bois </h5>
+            <h5 class="mb-5 ms-3 mt-3">
+             <?php
+            while($data= mysqli_fetch_assoc($rus)){
+             if($data["id"]==$id){
+                echo $data["name"];
+             }
+            } 
+             ?>
+            </h5>
             <div class=" w-100 d-flex justify-content-center">
                 <?php include 'tableau.php' ?>
                 <tbody>

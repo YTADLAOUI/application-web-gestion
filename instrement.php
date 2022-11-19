@@ -57,7 +57,7 @@
                             </div>
                         </button>
                     </a>
-                    <a href ="http://localhost/application-web-gestion/percussion.php?id=5"><button class="card"  style="width: 14rem;">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=5"><button class="card"  style="width: 14rem;">
                         <img src="img/4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Les instrement des percussions</h5>
