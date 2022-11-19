@@ -5,6 +5,9 @@
 		$id = $_GET['id'];}
         $sqly="SELECT * FROM categorie";
         $rus=mysqli_query($conn,$sqly);
+        if(!isset($_SESSION['name'])){
+            header('location: login.php');
+        }
 
 ?>
 <!DOCTYPE html>
