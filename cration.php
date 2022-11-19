@@ -56,8 +56,8 @@
 								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
 							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
-							<button type='submit' name='update' class='btn btn-warning task-action-btn w-50' id='update-btn'>Update</a>
-                			<button type='submit' name='delete' class='btn btn-danger task-action-btn w-50' id='delete-btn'>Delete</a>
+							<button type='submit' name='update' class='btn btn-warning task-action-btn w-50' id='update-btn'>Update</button>
+                			
 				</form>
             </div>
         </div>

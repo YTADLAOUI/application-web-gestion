@@ -58,8 +58,9 @@
                 <td>". $row['prix'] ."dh</td>
                 <td>". $row['c_name'] ."</td>
                 <td>". $row['date_time'] ."</td>
-                <td>". $row['description'] ."</td>
-                <td><a href='cration.php?id=$row[instrement_id]' calss=''><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</a></td>
+                <td>". $row['description'] ."</td>        
+                <td><a href='cration.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</button></a></td>
+                <td><button type='submit' name='delete' class='btn task-action-btn text-danger' id='delete-btn'>Delete</button></td>
 
                 </tr>
                 
