@@ -25,13 +25,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="instrement.php">
+                                <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="instrument.php">
                                     <i class="bi bi-music-note me-2"></i>
                                     <span class="ss">Les instruments</span>
                                 </a>
                             </li>
                             <li>
-                                <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="cration.php">
+                                <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="creation.php">
                                     <i class="bi bi-plus-circle-dotted me-2 h6"></i>
                                     <span class="ss pb-1">add instrument</span>
                                 </a>

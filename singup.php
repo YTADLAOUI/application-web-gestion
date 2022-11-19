@@ -88,11 +88,7 @@
         }
     </style>
 </head>
-
-
 <body >
-        
-    
     <div class="bg"></div>
     <nav>
 <div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>

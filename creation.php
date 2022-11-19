@@ -1,6 +1,7 @@
 <?php
    include "data.php";
    session_start();
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +24,11 @@
         <div class="content w-100 " style="background-color: rgb(226, 223, 220);">
             <!-- start-header -->
             <?php include 'header.php'; ?>
-            <h5 class="p-3" style=""> + add instrement</h5>
+            <h5 class="p-3" style=""> + add instrument</h5>
             <div class="d-flex justify-content-center">
-                 <form class="" action = "scripte.php" method ="POST">
+                 <form class="" action = "script.php" method ="POST">
                             <div class="mb-3">
-								<label class="form-label">Name d'instremente</label>
+								<label class="form-label">Name d'instrumente</label>
 								<input type="text" value="<?= $row['name']?? ''  ?>" name ="instr-title" class="form-control" id="inster_title" required/>
 							</div>
                             <div class="mb-3">
@@ -41,7 +42,7 @@
                             <div class="mb-3">
 								<label class="form-label">catégorie</label>
 								<select class="form-select" name = "inster-cat" id="inster_cat">								
-									<option  <?= (isset($row['categoryId']) AND $row['categoryId'] == '1')  ? 'selected' : ''?> value="1">les instrements bois</option>
+									<option  <?= (isset($row['categoryId']) AND $row['categoryId'] == '1') ? 'selected' : ''?> value="1">les instrements bois</option>
 									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '2')  ? 'selected' : ''?> value="2">les instrments cordes</option>
 									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '3' ) ? 'selected' : ''?> value="3">les instrement celle des claviers</option>
 									<option <?= (isset($row['categoryId']) AND $row['categoryId'] == '5')  ? 'selected' : ''?>  value="5">les instrements percussion</option>
@@ -56,14 +57,17 @@
 								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
 							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
-							<button type='submit' name='update' class='btn btn-warning task-action-btn w-50' id='update-btn'>Update</button>
+						    <a href="http://localhost/application-web-gestion/script.php?id=<?=$row['instrement_id'];?>"><button type='submit' onc name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button></a>
+							
                 			
 				</form>
             </div>
         </div>
             <!-- end -->
     </div>
-   
+	<!-- javascripte -->
+	<script src="script.js"></script>
     
 </body>
+
 </html>

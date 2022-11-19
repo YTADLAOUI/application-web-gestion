@@ -1,6 +1,6 @@
 <?php
- include('database.php');
-    include('scripte.php');
+    include('database.php');
+    include('script.php');
     if(isset($_GET['id'])){
 		$id = $_GET['id'];}
         $sqly="SELECT * FROM categorie";
@@ -54,3 +54,4 @@
     
 </body>
 </html>
+<script src="script.js"></script>

@@ -5,6 +5,8 @@
     session_start();
        if(isset($_POST["signIn"])){ login();}
        if(isset($_POST["save"])){saveInstrement();}
+       if(isset($_GET["action"])&&($_GET["action"] === "delete")){deletInster();}
+       if(isset($_POST["update"])){update();}
 
 
 
@@ -37,8 +39,17 @@
         $description    = $_POST["inster-description"];
         $sqlconn ="INSERT INTO `instrement`( `name`, `description`, `date_time`, `quantite`, `categoryId`, `prix`) VALUES ('$Title','$description','$Date','$Quantite','$catégorie','$Prix')";
            mysqli_query($conn,$sqlconn);
-           header('location: cration.php');
+           sleep(2) ;
+           header('location: creation.php');
            
+        }
+        function deletInster(){
+            global $conn;
+          $var= $_GET["id"] ;
+          $ssql="DELETE FROM instrement WHERE instrement_id = $var";
+          mysqli_query($conn,$ssql);
+        sleep(2) ;
+        //  header('location: instrument.php');
         }
         
         function afficher($Var){
@@ -59,14 +70,32 @@
                 <td>". $row['c_name'] ."</td>
                 <td>". $row['date_time'] ."</td>
                 <td>". $row['description'] ."</td>        
-                <td><a href='cration.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</button></a></td>
-                <td><button type='submit' name='delete' class='btn task-action-btn text-danger' id='delete-btn'>Delete</button></td>
+                <td><a href='creation.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</button></a></td>
+                <td><a href='script.php?id=$row[instrement_id]&action=delete'><button type='submit' name='dele' class='btn task-action-btn' id='Edit-btn'>DELETE</button></a></td>
 
                 </tr>
                 
                 ";
             }
         } 
+        function update(){
+            global $conn;
+            if(isset($_GET['id'])){
+        $num= $_GET["id"];
+        $Title          = $_POST["instr-title"];
+        $Quantite       = $_POST["inster-qte"];
+        $Prix           = $_POST["inster-prix"];
+        $catégorie      = $_POST["inster-cat"];
+        $Date           = $_POST["inster-date"];
+        $description    = $_POST["inster-description"];
+            $upd= "UPDATE `instrement` SET `name`='$Title',`description`='$description',`date_time`='$Date',`quantite`='$Quantite',`categoryId`='$catégorie',`prix`='$Prix ' WHERE instrement_id =$num";
+            mysqli_query($conn,$upd);
+                sleep(1);
+            header('location: creation.php');
+        }
+        }
         
 
     ?>
+
+<!-- <td><button  onclick=delet($row[instrement_id]) type='submit' name='dele' class='btn task-action-btn text-danger' id='delete-btn'>Delete</button></td> -->
