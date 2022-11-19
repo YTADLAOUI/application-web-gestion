@@ -48,13 +48,12 @@
           $var= $_GET["id"] ;
           $ssql="DELETE FROM instrement WHERE instrement_id = $var";
           mysqli_query($conn,$ssql);
-        sleep(2) ;
-        //  header('location: instrument.php');
+          sleep(2) ;
+          header('location: instrument.php');
         }
         
         function afficher($Var){
             global $conn;
-
             $i=1;
             $qyy="SELECT i.* ,c.name c_name FROM instrement i JOIN categorie c ON c.id = i.categoryId AND  i.categoryId= $Var";
             $result = mysqli_query($conn,$qyy);
@@ -72,16 +71,14 @@
                 <td>". $row['description'] ."</td>        
                 <td><a href='creation.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</button></a></td>
                 <td><a href='script.php?id=$row[instrement_id]&action=delete'><button type='submit' name='dele' class='btn task-action-btn' id='Edit-btn'>DELETE</button></a></td>
-
                 </tr>
-                
                 ";
             }
         } 
         function update(){
             global $conn;
-            if(isset($_GET['id'])){
-        $num= $_GET["id"];
+            
+        $num            = $_POST["id_hid"] ;
         $Title          = $_POST["instr-title"];
         $Quantite       = $_POST["inster-qte"];
         $Prix           = $_POST["inster-prix"];
@@ -93,7 +90,7 @@
                 sleep(1);
             header('location: creation.php');
         }
-        }
+        
         
 
     ?>

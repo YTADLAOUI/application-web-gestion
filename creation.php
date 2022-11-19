@@ -27,6 +27,7 @@
             <h5 class="p-3" style=""> + add instrument</h5>
             <div class="d-flex justify-content-center">
                  <form class="" action = "script.php" method ="POST">
+							<input type="hidden" name="id_hid" value="<?= $row['instrement_id']?? ''?>">
                             <div class="mb-3">
 								<label class="form-label">Name d'instrumente</label>
 								<input type="text" value="<?= $row['name']?? ''  ?>" name ="instr-title" class="form-control" id="inster_title" required/>
@@ -57,7 +58,7 @@
 								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
 							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
-						    <a href="http://localhost/application-web-gestion/script.php?id=<?=$row['instrement_id'];?>"><button type='submit' onc name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button></a>
+						    <button type='submit'  name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button>
 							
                 			
 				</form>
