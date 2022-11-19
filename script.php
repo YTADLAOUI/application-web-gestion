@@ -7,6 +7,7 @@
        if(isset($_POST["save"])){saveInstrement();}
        if(isset($_GET["action"])&&($_GET["action"] === "delete")){deletInster();}
        if(isset($_POST["update"])){update();}
+       if(isset($_POST["signup"])){logup();}
 
 
 
@@ -30,7 +31,16 @@
           }
         }
         function logup(){
-            
+            global $conn;
+            $nom = $_POST["nom_up"];
+            $pre=$_POST["Prenom_up"];
+            $mail=$_POST["Prenom_up"];
+            $psw=$_POST["psw_up"];
+            $up="INSERT INTO `adminx`(`nom`, `prenom`, `email`, `psw`) VALUES ('$nom','$pre','$mail','$psw')";
+            mysqli_query($conn,$up);
+            sleep(2) ;
+            header('location: login.php');
+
         }
         function saveInstrement(){
             global $conn;
