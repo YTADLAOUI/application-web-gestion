@@ -29,6 +29,9 @@
             }
           }
         }
+        function logup(){
+            
+        }
         function saveInstrement(){
             global $conn;
         $Title          = $_POST["instr-title"];

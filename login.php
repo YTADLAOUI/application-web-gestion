@@ -102,7 +102,7 @@
 <div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
 </nav>
     <div class="fors">
-    <form class="" action = "scripte.php" method ="POST">
+    <form class="" action = "script.php" method ="POST">
         <div class="container">
             <h1>Sign In</h1>
             <p>Welcome back to our application enjoy it.</p>

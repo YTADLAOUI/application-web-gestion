@@ -86,6 +86,13 @@
             justify-content: center;
             text-align: center;
         }
+        @media only screen and (max-width: 390px) {
+            .hd.d-flex.justify-content-between{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            }
     </style>
 </head>
 <body >
@@ -94,24 +101,33 @@
 <div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
     </nav>
     <div class="fors">
-    <form>
+    <form action = "script.php" method ="POST">
         <div class="container">
             <h3>Sign Up</h3>
             <p>Please fill in this form to create an account.</p>
             <hr>
+            <div class="hd d-flex justify-content-between">
+                <div style="width:45%">
+                    <div class="nom d-flex align-items-start">
+                        <p><b>Nom</b></p>
+                    </div>
+                    <input type="text" placeholder="Enter Nom"class="w-100" name="nom_up"  required>
+                </div>
+                <div style="width:45%">
+                    <div class="prenom d-flex align-items-start">
+                        <p><b>Prénom</b></p>
+                    </div>
+                    <input type="text" placeholder="Enter Prénom" class="w-100" name="Prenom_up" required>
+                </div>
+            </div>
             <div class="email d-flex align-items-start">
                 <p><b>Email</b></p>
             </div>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
+            <input type="text" placeholder="Enter Email" name="email_up" required>
             <div class="psw d-flex align-items-start">
                 <p><b>Password</b></p>
             </div>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <div class="psw d-flex align-items-start">
-                <p><b>Repeat Password</b></p>
-            </div>
-            <input type="password" placeholder="Enter Password" name="psw-Repeat" required>
+            <input type="password" placeholder="Enter Password" name="psw_up" required>
             <p class='mt'>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Sign Up</button>
