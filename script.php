@@ -8,6 +8,7 @@
        if(isset($_GET["action"])&&($_GET["action"] === "delete")){deletInster();}
        if(isset($_POST["update"])){update();}
        if(isset($_POST["signup"])){logup();}
+       if(isset($_GET["log"])&&($_GET["log"]==="out")){logout();}
 
 
 
@@ -103,7 +104,10 @@
                 sleep(1);
             header('location: creation.php');
         }
-        
+        function logout(){
+            session_destroy();
+            header('location: login.php');
+        }
         
 
     ?>

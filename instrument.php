@@ -28,46 +28,56 @@
             <?php include 'header.php'; ?>
             <h4 class="p-3" style= "">les instruments</h4>
 
-      <div style="flex-wrap: wrap;" class="d-flex align-items-center justify-content-around ">
-
-        <a href ="http://localhost/application-web-gestion/categorie.php?id=1"><button class="card"  style="width: 14rem;">
-            <img src="img/3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> Les instrument bois</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
-            </div>
-        </button>
-    </a>
-        <a href ="http://localhost/application-web-gestion/categorie.php?id=2">
-            <button class="card"  style="width: 14rem;">
-            <img src="img/2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Les instrument celle des claviers</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
-            </div>
-        </button>
-        </a>
-                    <a href ="http://localhost/application-web-gestion/categorie.php?id=3">
-                        <button  class="card"  style="width: 14rem;">
-                            <img src="img/1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Les instrument des cordes</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                
-                            </div>
-                        </button>
-                    </a>
-                    <a href ="http://localhost/application-web-gestion/categorie.php?id=5"><button class="card"  style="width: 14rem;">
-                        <img src="img/4.jpg" class="card-img-top" alt="...">
+            <div style="flex-wrap: wrap;" class="d-flex align-items-center justify-content-around m">
+                <div class="mb-1">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=1">
+                    <button class="card"  style="width: 14rem;">
+                        <img src="img/3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Les instrument des percussions</h5>
+                            <h5 class="card-title"> Les instrument bois</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             
                         </div>
-                    </button></a>
-         </div>
+                    </button>
+                    </a>
+                </div>
+                <div class="mb-1">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=2">
+                    <button class="card"  style="width: 14rem;">
+                        <img src="img/2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Les instrument celle des claviers</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            
+                        </div>
+                    </button>
+                    </a>
+                </div>
+                <div class="mb-1">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=3">
+                                <button  class="card"  style="width: 14rem;">
+                                    <img src="img/1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Les instrument des cordes</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        
+                                    </div>
+                                </button>
+                    </a>
+                </div>
+                <div class="mb-1">
+                    <a href ="http://localhost/application-web-gestion/categorie.php?id=5">
+                    <button class="card"  style="width: 14rem;">
+                                <img src="img/4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Les instrument des percussions</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    
+                                </div>
+                    </button>
+                    </a>
+                </div>
+            </div>
         </div>
             <!-- end -->
     </div>

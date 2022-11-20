@@ -5,7 +5,7 @@
                                  <b class="name-logo ss">RockStars</b>
                     </a>
             </div>
-                        <ul style="font-size:10px;">
+                        <ul style="font: size 15px;">
                             <li>
                                 <a class="active d-flex align-items-center text-dark p-1 ss" style="border-radius 6px;" href="principal.php">
                                     <i class="bi bi-graph-down me-2"></i>
@@ -37,12 +37,11 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul style=";font-size:10px;"  class="d-flex align-items-end">
-                                <a class="d-flex align-items-end text-dark p-1 " style="border-radius 6px;" href="index.php">
+                        <ul style=";font: size 15px;"  class="d-flex align-items-end" >
+                                <a class="d-flex align-items-end text-dark p-1 "  style="border-radius 6px;" href="script.php?log=out">
                                     <i class="bi bi-box-arrow-left me-2"></i>
                                     <span class="ss">Log out</span>
                                 </a>
-
                         </ul>
                    
     </div>
