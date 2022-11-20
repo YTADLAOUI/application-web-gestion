@@ -9,11 +9,11 @@
                         </div>
                     </div>
                     <div class ="d-flex">
-                        <span class="not">
+                        <span class="not" style="margin: 2px;">
                             <i class="bi bi-bell me-2"></i>
                         </span>
-                        <span class="immg d-flex flex-column ">
-                           <div><img src="img/user-icon.png" alt=""></div>
+                        <span class="immg d-flex ">
+                           <div class="me-2 "><img style="height:20px;width: 20px;" src="img/user-icon.png" alt=""></div>
                             <?php 
                             echo $_SESSION['name'];
                             ?>
