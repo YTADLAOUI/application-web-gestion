@@ -5,9 +5,9 @@
                                  <b class="name-logo ss">RockStars</b>
                     </a>
             </div>
-                        <ul style="font: size 15px;">
+                        <ul  class="sidebar-list" style="font: size 15px;">
                             <li>
-                                <a class="active d-flex align-items-center text-dark p-1 ss" style="border-radius 6px;" href="principal.php">
+                                <a class=" d-flex align-items-center text-dark p-1 ss" style="border-radius 6px;" href="principal.php">
                                     <i class="bi bi-graph-down me-2"></i>
                                     <span class="ss">Dashbord</span>
                                 </a>

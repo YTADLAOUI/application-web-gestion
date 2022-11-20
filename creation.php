@@ -18,6 +18,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styleee.css">
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="https://parsleyjs.org/dist/parsley.min.js"></script>
 	    <!-- ================== END core-css ================== -->
     <title>Dashbord</title>
 </head>
@@ -29,11 +31,11 @@
             <?php include 'header.php'; ?>
             <h5 class="p-3" style=""> + add instrument</h5>
             <div class="d-flex justify-content-center">
-                 <form class="" action = "script.php" method ="POST">
+                 <form class="" id="form" action = "script.php" method ="POST" data-parsley-validate>
 							<input type="hidden" name="id_hid" value="<?= $row['instrement_id']?? ''?>">
                             <div class="mb-3">
 								<label class="form-label">Name d'instrumente</label>
-								<input type="text" value="<?= $row['name']?? ''  ?>" name ="instr-title" class="form-control" id="inster_title" required/>
+								<input type="text" value="<?= $row['name']?? ''  ?>" name ="instr-title" class="form-control" id="inster_title" data-parsley-minlength="3" required/>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">Quantite</label>
@@ -41,7 +43,7 @@
 							</div>
                             <div class="mb-3">
 								<label class="form-label">Prix</label>
-								<input type="number"value="<?= $row['prix'] ?? ''?>" name ="inster-prix" class="form-control" id="inster_prix" required/>
+								<input type="number"value="<?= $row['prix'] ?? ''?>" name ="inster-prix" class="form-control" id="inster_prix"step=any required/>
 							</div>
                             <div class="mb-3">
 								<label class="form-label">catégorie</label>
@@ -58,7 +60,7 @@
 							</div>
 							<div class="mb-0 " >
 								<label class="form-label">Description</label>
-								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" required><?= $row['description'] ?? '' ?></textarea>
+								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" rows="10" data-parsley-trigger="keyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 5 character comment.." data-parsley-validation-threshold="10" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
 							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
 						    <button type='submit'  name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button>
@@ -70,7 +72,7 @@
             <!-- end -->
     </div>
 	<!-- javascripte -->
-	<script src="script.js"></script>
+	<script src="scripte.js"></script>
     
 </body>
 
