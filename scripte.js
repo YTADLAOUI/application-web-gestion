@@ -1,1 +1,1 @@
-$('form').parsley();
+$('#form').parsley();

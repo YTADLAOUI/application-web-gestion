@@ -103,33 +103,36 @@
 <div class="text-white h1 position-relative"><a href="http://localhost/application-web-gestion/"class="text-decoration-none text-white"><span class="navbar-logo text-danger "><i class="bi bi-music-note-list"></i></span> <b class="name-logo">RockStars</b></a></div>
     </nav>
     <div class="fors">
-    <form action = "script.php" method ="POST">
+    <form action = "script.php" method ="POST" data-parsley-validate >
         <div class="container">
             <h3>Sign Up</h3>
             <p>Please fill in this form to create an account.</p>
-            <hr>
             <div class="hd d-flex justify-content-between">
-                <div class ="wipre" >
-                    <div class="nom d-flex align-items-start">
-                        <p><b>Nom</b></p>
-                    </div>
+                <div class ="inputnom flex-grow-1" >
+                    <div class="p-2">
+                        <div class="nom d-flex align-items-start">
+                            <p><b>Nom</b></p>
+                        </div>
                     <input type="text" placeholder="Enter Nom"class="w-100" name="nom_up"  required>
-                </div>
-                <div class ="wipre" >
-                    <div class="prenom d-flex align-items-start">
-                        <p><b>Prénom</b></p>
                     </div>
+                </div>
+                <div class ="inputnom flex-grow-1" >
+                    <div class="p-2">
+                        <div class="prenom d-flex align-items-start">
+                            <p><b>Prénom</b></p>
+                        </div>
                     <input type="text" placeholder="Enter Prénom" class="w-100" name="Prenom_up" required>
+                    </div>
                 </div>
             </div>
             <div class="email d-flex align-items-start">
                 <p><b>Email</b></p>
             </div>
-            <input type="text" placeholder="Enter Email" name="email_up" required>
+            <input type="email" placeholder="Enter Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[a-z]{2,4}$" name="email_up" required>
             <div class="psw d-flex align-items-start">
                 <p><b>Password</b></p>
             </div>
-            <input type="password" placeholder="Enter Password" name="psw_up" required>
+            <input type="password" minlength="6" placeholder="Enter Password" name="psw_up" required>
             <p class='mt'>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
                 <button type="submit" name ="signup" class="signupbtn">Sign Up</button>

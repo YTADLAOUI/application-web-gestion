@@ -41,8 +41,8 @@ ul {
     height: 10%;
     background-color: rgb(255, 255, 255);
 }
-.wipre{
-    width:55%;
+.inputnom{
+    width: 55%;
 }
 
 @media only screen and (max-width: 391px){
@@ -55,7 +55,7 @@ ul {
     .input-group-text.border-0.btn.btn-primary.search,.form-control.rounded.inpu{
         display: none;
     }
-    .wipre{
+    .inputnom{
         width: 100% !important;
     }
 }

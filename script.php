@@ -9,10 +9,6 @@
        if(isset($_POST["update"])){update();}
        if(isset($_POST["signup"])){logup();}
        if(isset($_GET["log"])&&($_GET["log"]==="out")){logout();}
-
-
-
-
        function login(){
         global $conn;
         if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -25,12 +21,13 @@
                $row =mysqli_fetch_assoc($res);
                $_SESSION['name'] = $row['nom'];
                header('location: principal.php');
-               
             }else{
-                header('location: login.php');
-                echo "<script>window.alert('vrifier l'e-mail ou le mot de passe')</script>";
                 
+            
                 
+                header('location: login.php?message');
+               $_SESSION['message'] = "s'il vous plait check votre information!";
+            
             }
           }
         }
@@ -132,6 +129,10 @@
 
             unset($_SESSION['name']);
             header('location: login.php');
+        }
+
+        function message(){
+                $_SESSION["test"]="test";
         }
         
 
