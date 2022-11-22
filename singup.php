@@ -109,13 +109,13 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
             <div class="hd d-flex justify-content-between">
-                <div style="width:45%">
+                <div class ="wipre" >
                     <div class="nom d-flex align-items-start">
                         <p><b>Nom</b></p>
                     </div>
                     <input type="text" placeholder="Enter Nom"class="w-100" name="nom_up"  required>
                 </div>
-                <div style="width:45%">
+                <div class ="wipre" >
                     <div class="prenom d-flex align-items-start">
                         <p><b>Prénom</b></p>
                     </div>

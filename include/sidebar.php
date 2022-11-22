@@ -25,9 +25,15 @@
                                 </a>
                             </li>
                             <li>
+                                <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="toutsInstrument.php">
+                                <i class="bi bi-music-note-beamed me-2"></i>
+                                    <span class="ss">Touts instruments </span>
+                                </a>
+                            </li>
+                            <li>
                                 <a class=" d-flex align-items-center text-dark p-1" style="border-radius 6px;" href="instrument.php">
                                     <i class="bi bi-music-note me-2"></i>
-                                    <span class="ss">Les instruments</span>
+                                    <span class="ss">Les catégories</span>
                                 </a>
                             </li>
                             <li>

@@ -1,5 +1,5 @@
 <?php
-   include "data.php";
+   include "include/data.php";
    session_start();
    if(!isset($_SESSION['name'])){
 	header('location: login.php');
@@ -25,10 +25,10 @@
 </head>
 <body class="bg-">
     <div class="page d-flex ">
-           <?php include 'sidebar.php' ?>
+           <?php include 'include/sidebar.php' ?>
         <div class="content w-100 " style="background-color: rgb(226, 223, 220);">
             <!-- start-header -->
-            <?php include 'header.php'; ?>
+            <?php include 'include/header.php'; ?>
             <h5 class="p-3" style=""> + add instrument</h5>
             <div class="d-flex justify-content-center">
                  <form class="" id="form" action = "script.php" method ="POST" data-parsley-validate>
@@ -62,8 +62,18 @@
 								<label class="form-label">Description</label>
 								<textarea  class="form-control" rows="4" name="inster-description" id="inster_description" rows="10" data-parsley-trigger="keyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 5 character comment.." data-parsley-validation-threshold="10" required><?= $row['description'] ?? '' ?></textarea>
 							</div>
-							<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>
-						    <button type='submit'  name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button>
+							<?php
+								if(isset($_GET['id']))
+								{
+									echo "<button type='submit'  name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button>";
+								}
+								else
+								{
+									echo '<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>';
+								}
+							?>
+							
+						    
 							
                 			
 				</form>

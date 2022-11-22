@@ -1,8 +1,21 @@
 <?php 
+    include("include/database.php");
 	session_start();
     if(!isset($_SESSION['name'])){
         header('location: login.php');
     }
+        
+        $isql= "SELECT * FROM `instrement`";
+        $connRes=mysqli_query($conn,$isql);
+        $count=mysqli_num_rows($connRes);
+        $valueDeStock=" SELECT sum(prix) valeur FROM `instrement`";
+        $connResu=mysqli_query($conn,$valueDeStock);
+        $fetch=mysqli_fetch_assoc($connResu);
+        $isq="SELECT * FROM adminx";
+        $connresul=mysqli_query($conn,$isq);
+        $countadmin=mysqli_num_rows($connresul);
+       
+        //die(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,36 +34,31 @@
 </head>
 <body class="bg-">
     <div class="page d-flex ">
-           <?php include 'sidebar.php' ?>
+           <?php include 'include/sidebar.php' ?>
         <div class="content w-100 " style="background-color: rgb(226, 223, 220)">
             <!-- start-header -->
-            <?php include 'header.php'; ?>
-            <h3 style= "">Dashbord</h3>
+            <?php include 'include/header.php'; ?>
+            <h3 class="p-3" style= "">Dashbord</h3>
                 <div class = "d-flex flex-wrap align-items-center justify-content-around " style="height:70vh;">
-                    <div class="card" style="width: 9rem; height :15rem">
-                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/stor.png" alt="Card image cap">
+                    <div class="card" style="width: 11rem; height :10rem">
+                            <img class="card-img-top mx-auto my-2" style ="max-height: 40px; max-width :40px;" src="img/stor.png" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text"> <b>Les numbres des instruments est <?= $count?></b></p>
                             </div>
                     </div>
-                    <div class="card" style="width: 9rem; height :15rem">
-                            <img  style ="max-height: 40px; max-width :40px;" class="card-img-top" src="img/nbr.png" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card" style="width: 11rem; height :10rem">
+                            <img  style ="max-height: 40px; max-width :40px;" class="card-img-top mx-auto my-2" src="img/nbr.png" alt="Card image cap">
+                            <div class="card-body "style="width: 10rem;">
+                                <p class="card-text text-center"><b> les admins <?=$countadmin?></b></p>
                             </div>
                     </div>
-                    <div class="card" style="width: 9rem; height :15rem">
-                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/sala.png" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card" style="width: 11rem; height :10rem">
+                            <img class="card-img-top mx-auto my-2" style ="max-height: 40px; max-width :40px;" src="img/sala.png" alt="Card image cap">
+                            <div class="card-body text-center" style="width: 10rem;">
+                                <p class="card-text"><b>la valuer total de stock est <?=$fetch['valeur']?>dh</b></p>
                             </div>
                     </div>
-                    <div class="card" style="width: 9rem; height :15rem;">
-                            <img class="card-img-top" style ="max-height: 40px; max-width :40px;" src="img/ddd.png" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                    </div>
+                   
                 </div>
             </div>
             <!-- end -->

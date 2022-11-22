@@ -1,6 +1,6 @@
 <?php
     //INCLUDE DATABASE FILE
-    include('database.php');
+    include('include/database.php');
     //SESSSION IS A WAY TO STORE DATA TO BE USED ACROSS MULTIPLE PAGES
     session_start();
        if(isset($_POST["signIn"])){ login();}
@@ -83,12 +83,33 @@
                 <td>". $row['c_name'] ."</td>
                 <td>". $row['date_time'] ."</td>
                 <td>". $row['description'] ."</td>        
-                <td><a href='creation.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn task-action-btn' id='Edit-btn'>Edit</button></a></td>
-                <td><a href='script.php?id=$row[instrement_id]&action=delete'><button type='submit' name='dele' class='btn task-action-btn' id='Edit-btn'>DELETE</button></a></td>
+                <td><a href='creation.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn btn-outline-warning' id='Edit-btn'>Edit</button></a></td>
+                <td><a href='script.php?id=$row[instrement_id]&action=delete'><button type='button' name='dele' class='btn btn-outline-danger' id='Edit-btn'>DELETE</button></a></td>
                 </tr>
                 ";
             }
         } 
+        function afficherTouts(){
+            global $conn;
+            $i=1;
+            $Query="SELECT i.* ,c.name c_name FROM instrement i JOIN categorie c ON c.id = i.categoryId ";
+            $result=mysqli_query($conn,$Query);
+            while($row=mysqli_fetch_assoc($result)){
+                echo "
+                <tr> 
+                <th scope='row'>".$i++."</th>
+                <td>". $row['name'] ."</td>  
+                <td>". $row['quantite'] ."</td>
+                <td>". $row['prix'] ."dh</td>
+                <td>". $row['c_name'] ."</td>
+                <td>". $row['date_time'] ."</td>
+                <td>". $row['description'] ."</td>        
+                <td><a href='creation.php?id=$row[instrement_id]'><button type='submit' name='Edit' class='btn btn-outline-warning' id='Edit-btn'>Edit</button></a></td>
+                <td><a href='script.php?id=$row[instrement_id]&action=delete'><button type='submit' name='dele' class='btn btn-outline-danger' id='Edit-btn'>DELETE</button></a></td>
+                </tr>
+                ";
+            }
+        }
         function update(){
             global $conn;
             

@@ -1,14 +1,8 @@
-<?php
-    include('include/data.php');
-    include('script.php');
-    if(isset($_GET['id'])){
-		$id = $_GET['id'];}
-        $sqly="SELECT * FROM categorie";
-        $rus=mysqli_query($conn,$sqly);
-        if(!isset($_SESSION['name'])){
-            header('location: login.php');
-        }
+<?php include('script.php');
 
+if(!isset($_SESSION['name'])){
+    header('location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,19 +26,13 @@
             <!-- start-header -->
             <?php include 'include/header.php'; ?>
             <h5 class="mb-5 ms-3 mt-3">
-             <?php
-            while($data= mysqli_fetch_assoc($rus)){
-             if($data["id"]==$id){
-                echo $data["name"];
-             }
-            } 
-             ?>
+             touts instruments
             </h5>
             <div class=" w-100 d-flex justify-content-center">
                 <?php include 'include/tableau.php' ?>
                 <tbody>
                     <?php
-                afficher($id);
+                afficherTouts()
                     ?>
                 </tbody>
                 </table>

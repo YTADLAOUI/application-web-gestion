@@ -1,5 +1,5 @@
 <?php 
-	include "data.php";
+	include "include/data.php";
     session_start();
     if(!isset($_SESSION['name'])){
         header('location: login.php');
@@ -22,11 +22,11 @@
 </head>
 <body class="bg-">
     <div class="page d-flex " >
-           <?php include 'sidebar.php' ?>
+           <?php include 'include/sidebar.php' ?>
         <div class="content w-100 " style="background-color: rgb(226, 223, 220);">
             <!-- start-header -->
-            <?php include 'header.php'; ?>
-            <h4 class="p-3" style= "">les instruments</h4>
+            <?php include 'include/header.php'; ?>
+            <h4 class="p-3" style= "">les instruments par catégorie</h4>
 
             <div style="flex-wrap: wrap;" class="d-flex align-items-center justify-content-around m">
                 <div class="mb-1">
