@@ -28,6 +28,9 @@
                
             }else{
                 header('location: login.php');
+                echo "<script>window.alert('vrifier l'e-mail ou le mot de passe')</script>";
+                
+                
             }
           }
         }

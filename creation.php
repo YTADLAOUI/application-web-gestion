@@ -65,11 +65,11 @@
 							<?php
 								if(isset($_GET['id']))
 								{
-									echo "<button type='submit'  name='update' class='btn btn-warning task-action-btn w-100' id='update-btn'>Update</button>";
+									echo "<button type='submit'  name='update' class='btn btn-warning task-action-btn w-100 mt-3' id='update-btn'>Update</button>";
 								}
 								else
 								{
-									echo '<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-2" id="save-btn">Save</button>';
+									echo '<button type="submit" name="save" class="btn btn-primary task-action-btn w-100 mt-3" id="save-btn">Save</button>';
 								}
 							?>
 							
